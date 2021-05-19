@@ -128,7 +128,7 @@ class WebRTCDirect {
 
       channel.on('signal', (signal) => {
         const signalStr = JSON.stringify(signal)
-        const url = 'http://' + cOpts.host + ':' + cOpts.port
+        const url = 'https://' + cOpts.host + ':' + cOpts.port
         const path = '/?signal=' + toString(multibase.encode('base58btc', new TextEncoder().encode(signalStr)))
         const uri = url + path
 
