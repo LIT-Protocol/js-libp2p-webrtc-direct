@@ -9,7 +9,8 @@
   },
   "browser": {
     "wrtc": false,
-    "http": false,
+    "https": false,
+    "fs": false,
     "request": "xhr"
   },
   "scripts": {
