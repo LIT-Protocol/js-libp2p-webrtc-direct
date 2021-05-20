@@ -1,6 +1,6 @@
 {
   "name": "@lit-protocol/libp2p-webrtc-direct",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Dial using WebRTC without the need to set up any Signalling Rendezvous Point! ",
   "leadMaintainer": "Vasco Santos <vasco.santos@moxy.studio>",
   "main": "src/index.js",
