@@ -20,7 +20,7 @@ module.exports = ({ handler, upgrader }, options = {}) => {
   const listener = new EventEmitter()
   const nodeDomainName = process.env.LIT_NODE_DOMAIN_NAME
   if (!nodeDomainName) {
-    throw new Error('Error: LIT_NODE_DOMAIN_NAME env var is not set.  Please set it and make sure you have SSL certs set up for it via certbot in standalone mode.')
+    throw new Error('LIT_NODE_DOMAIN_NAME env var is not set.  Please set it and make sure you have SSL certs set up for it via certbot in standalone mode.')
   }
   const serverOptions = {
     key: fs.readFileSync(`/etc/letsencrypt/live/${nodeDomainName}/privkey.pem`),
