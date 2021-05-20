@@ -1,3 +1,5 @@
+This is a direct fork of js-libp2p-webrtc-direct except that it supports HTTPS servers and clients.
+
 # js-libp2p-webrtc-direct
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://protocol.ai)
