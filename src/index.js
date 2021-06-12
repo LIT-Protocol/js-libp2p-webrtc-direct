@@ -136,10 +136,17 @@ class WebRTCDirect {
           if (err) {
             return reject(err)
           }
-          const incSignalBuf = multibase.decode(res.body)
-          const incSignalStr = toString(incSignalBuf)
-          const incSignal = JSON.parse(incSignalStr)
-          channel.signal(incSignal)
+          try {
+            const incSignalBuf = multibase.decode(res.body)
+            const incSignalStr = toString(incSignalBuf)
+            const incSignal = JSON.parse(incSignalStr)
+            channel.signal(incSignal)
+          } catch (e) {
+            console.log('exception thrown on multibase.decode or channel.signal.  ignoring.  exception is printed below.')
+            console.log('Error Stack', e.stack)
+            console.log('Error Name', e.name)
+            console.log('Error Message', e.message)
+          }
         })
       })
     })
